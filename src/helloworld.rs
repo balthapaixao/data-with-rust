@@ -14,10 +14,19 @@ fn main() {
         .expect("Failed to read input.");
 
     if gender.trim() == "Male" {
-        println!("Hello Mr. {}! Welcome to the world of Rust!!!", name.trim())
+        println!(
+            "Hello, Mr. {}! Welcome to the world of Rust!!!",
+            name.trim()
+        )
     } else if gender.trim() == "Female" {
-        println!("Hello Ms. {}! Welcome to the world of Rust!!!", name.trim())
+        println!(
+            "Hello, Ms. {}! Welcome to the world of Rust!!!",
+            name.trim()
+        )
     } else {
-        println!("Hello Mx. {}! Welcome to the world of Rust!!!", name.trim())
+        println!(
+            "Hello, Mx. {}! Welcome to the world of Rust!!!",
+            name.trim()
+        )
     }
 }
