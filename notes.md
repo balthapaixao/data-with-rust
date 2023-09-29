@@ -1,3 +1,5 @@
+# Data with Rust Notes
+
 ## [Basic Syntax](https://datawithrust.com/chapter_2/chapter_2_4.html#basic-syntax)
 
 ### Variables
