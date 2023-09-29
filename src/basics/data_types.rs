@@ -90,13 +90,82 @@ fn enums() {
         VascoDaGama,
     }
 
-    let team = PossibleTeams::VascoDaGama;
+    #[derive(Debug)]
+    enum Options<T> {
+        Some(T),
+        None,
+    }
 
+    let team = PossibleTeams::VascoDaGama;
+    let option: Options<i32> = Options::Some(5);
     println!("\nENUM TYPES");
     println!("team: {:?}", team);
+    println!("option: {:?}", option);
 }
 
-fn impls() {}
+fn impls() {
+    #[derive(Debug)]
+    struct Car {
+        model: String,
+    }
+
+    impl Car {
+        fn new(model: &str) -> Car {
+            return Car {
+                model: model.to_string(),
+            };
+        }
+        fn accelerate(&self) {
+            println!("{} is accelerating!", self.model);
+        }
+    }
+
+    let car = Car::new("Fusca");
+
+    println!("\nIMPL TYPES");
+    println!("car: {:?}", car);
+    car.accelerate();
+}
+
+fn traits() {
+    trait CanRevFast {
+        fn revengine(&self);
+        fn is_fast(&self);
+    }
+
+    #[derive(Debug)]
+    struct Car {
+        model: String,
+    }
+    impl Car {
+        fn new(name: &str) -> Car {
+            return Car {
+                model: name.to_string(),
+            };
+        }
+        fn accelerate(&self) {
+            println!("{} is accelerating!", self.model);
+        }
+    }
+
+    //guarantee that Car implements Can Reverse Fast
+    impl CanRevFast for Car {
+        fn revengine(&self) {
+            println!("{} is reverse!", self.model);
+        }
+        fn is_fast(&self) {
+            println!("{} is fast!", self.model);
+        }
+    }
+
+    let car = Car::new("Fusca");
+
+    println!("\nTRAITS TYPES");
+    println!("car: {:?}", car);
+    car.accelerate();
+    car.revengine();
+    car.is_fast();
+}
 
 fn main() {
     integers();
@@ -108,4 +177,6 @@ fn main() {
     arrays();
     structs();
     enums();
+    impls();
+    traits();
 }

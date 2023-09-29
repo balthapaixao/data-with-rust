@@ -136,4 +136,26 @@ Rust allows you to create custom data types using struct, enum and union.
 
 ##### Unions
 
--
+- ...
+
+#### Custom Data Types Behaviour
+
+`impl` and `trait` keywords
+
+##### impl
+
+- means `implementation`;
+- used to define methods/functions for a specific data type;
+- like defining methos for a class in OOP;
+- there are some differences;
+- You want to define methods that are closely tied to the implementation of the data type.
+- You want to define methods that take ownership of the data type or modify its internal state.
+- You want to implement behaviour that is unique to a specific data type.
+
+##### trait
+
+- means `interface`;
+- used to define behaviour a data type should have;
+- allows us to extend a data type's behaviour;
+- You want to define generic behaviour that can be used with multiple data types.
+- You want to define behaviour that can be shared among different data types.
