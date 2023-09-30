@@ -133,6 +133,7 @@ Rust allows you to create custom data types using struct, enum and union.
 - Enums are declared using the `enum` keyword;
 - very useful for serializing and deserializing data;
 - Can be generic;
+- Ok and Err are called variants (enums) of the Result type.
 
 ##### Unions
 
@@ -175,3 +176,16 @@ These things will help massively in every data modelling effort, since the const
 - Option is like a box that you can have either Some(value) or None inside;
   - if a parameter is `Option<i32>` means that it is expecting a i32 or nothing;
 - You can use the `?` operator to return early from a function if an error occurs;
+
+### Modules
+
+- Modules are used to organize code;
+- Modules are declared using the `mod` keyword;
+- Modules can contain other modules;
+- containers where you can groups related functions together;
+- can be created in single files
+- useful when you want to split your code into multiple files;
+
+### Handling Errors
+
+-
