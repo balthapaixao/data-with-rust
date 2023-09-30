@@ -159,3 +159,19 @@ Rust allows you to create custom data types using struct, enum and union.
 - allows us to extend a data type's behaviour;
 - You want to define generic behaviour that can be used with multiple data types.
 - You want to define behaviour that can be shared among different data types.
+
+This means that you might use trait to define a Serialize trait that specifies how to serialise a data type into some format, which can be implemented by different data types and used with different serialization libraries.
+
+These things will help massively in every data modelling effort, since the constraints and methods are enforced thanks to the compiler.
+
+### Functions
+
+- input values defined in the form of `var_name: var_type`;
+- return values defined in the form of `-> return_type`;
+- return values are optional;
+- annotations has benefits, like optimisations anderror checking at compile time;
+- keep the types clear and unambiguous;
+- When a parameter is Option, you have to pass Some(value) or None as parameter;
+- Option is like a box that you can have either Some(value) or None inside;
+  - if a parameter is `Option<i32>` means that it is expecting a i32 or nothing;
+- You can use the `?` operator to return early from a function if an error occurs;
